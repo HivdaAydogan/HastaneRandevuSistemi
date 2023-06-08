@@ -1,0 +1,29 @@
+# application.properties --> dosyasinda asagidaki gibi yazilir.
+# server.port=9090
+# TODO: Dikkat, burada key-value çalismalarinda anahtar: bilgisinden sonra deger, bir boşluk birakilarak yazilmalidir.
+# server:
+#   port:9090 --> iki noktaya bitisik deger yazimi yanlistir.
+# server:
+# port: 9090 --> port degeri server'in alt basligidir bu nedenle ayni hizada degil bir tab içeride yazilmali
+server:
+  port: 9090
+
+# application.properties dosyasında aşağıdaki gibi kullanılır.
+# spring.datasource.url
+# spring.datasource.username
+# spring.datasource.password
+# spring.datasource.driver-class-name
+
+# application.yml dosyasında aşağıdaki gibi kullanılır. Alt başlıklar bir tab içeride olacak şekilde.
+spring:
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/HastaneRandevuDb"
+    username: "postgres"
+    password: "1234"
+    driver-class-name: "org.postgresql.Driver"
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+

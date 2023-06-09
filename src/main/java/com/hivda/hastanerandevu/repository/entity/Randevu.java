@@ -18,7 +18,14 @@ public class Randevu {
     Long id;
     Long doktorid;
     Long hastaid;
-    Long tarih;
+    Long tarih;  // 09.06.2023 - 10:30
     Long zaman;
+    /**
+     * 0: Beklemede
+     * 1: Onaylandı
+     * 2: Reddedildi
+     * 3: İptal Edildi
+     * 4: Tamamlandı
+     */
     Long durum;
 }

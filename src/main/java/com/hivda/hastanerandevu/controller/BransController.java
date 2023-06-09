@@ -1,7 +1,9 @@
 package com.hivda.hastanerandevu.controller;
 
+import com.hivda.hastanerandevu.dto.request.BransSaveRequestDto;
 import com.hivda.hastanerandevu.repository.entity.Brans;
 import com.hivda.hastanerandevu.service.BransService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,8 +19,8 @@ public class BransController {
     private final BransService bransService;
 
     @PostMapping(SAVE)
-    public Brans save(@RequestBody Brans brans){
-        return bransService.save(brans);
+    public Brans save(@RequestBody @Valid BransSaveRequestDto dto){
+        return bransService.save(dto);
     }
 
     @GetMapping(FINDALL)
